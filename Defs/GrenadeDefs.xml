@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <!-- ========== EMP Maraca ========== -->
+    <!-- Projectile -->
+    <ThingDef ParentName="BaseFragGrenadeProjectile">
+        <defName>RG_Maraca_Proj_EMP</defName>
+        <label>EMP maraca</label>
+        <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+        <graphicData>
+            <texPath>Maracas/Projectile/RG_Maraca_EMP</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <explosionRadius>4</explosionRadius>
+            <damageDef>EMP</damageDef>
+            <damageAmountBase>56</damageAmountBase>
+            <explosionDelay>60</explosionDelay>
+            <speed>12</speed>
+            <gravityFactor>2</gravityFactor>
+        </projectile>
+        <comps>
+        </comps>
+    </ThingDef>
+
+    <!-- Grenade -->
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseGrenadeEquipment">
+        <defName>RG_Maraca_EMP</defName>
+        <label>EMP maraca</label>
+        <description>Maracas are a classical instrument used by neolithic tribes and industrial colonies alike. Using the maracas as a vessel for the explosive compounds gives improved results, like increased range thanks to the change in aerodynamics and the possibility to increase the amount of materials included in some cases.</description>
+        <stackLimit>25</stackLimit>
+        <resourceReadoutPriority>First</resourceReadoutPriority>
+        <thingClass>CombatExtended.AmmoThing</thingClass>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Maracas/Grenade/EMP</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>RG_Maraca_Throw</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <Mass>0.4</Mass>
+            <Bulk>0.87</Bulk>
+            <MarketValue>12.22</MarketValue>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.65</SightsEfficiency>
+            <WorkToMake>12000</WorkToMake>
+        </statBases>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <label>throw EMP maraca</label>
+                <verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>15.0</range>
+                <minRange>4</minRange>
+                <warmupTime>0.8</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+                <soundCast>RG_Maraca_Throw</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>RG_Maraca_Proj_EMP</defaultProjectile>
+                <onlyManualCast>false</onlyManualCast>
+                <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+                <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_ExplosiveCE">
+                <damageAmountBase>56</damageAmountBase>
+                <explosiveDamageType>EMP</explosiveDamageType>
+                <explosiveRadius>4</explosiveRadius>
+                <explosionSound>Explosion_EMP</explosionSound>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>Body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>2</power>
+                <cooldownTime>1.75</cooldownTime>
+                <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Base</linkedBodyPartsGroup>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- ========== Flash Maraca ========== -->
+    <!-- Projectile -->
+    <ThingDef ParentName="BaseFragGrenadeProjectile">
+        <defName>RG_Maraca_Proj_Flash</defName>
+        <label>Flash maraca</label>
+        <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+        <graphicData>
+            <texPath>Maracas/Projectile/RG_Maraca_Flash</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <explosionRadius>4</explosionRadius>
+            <damageDef>Stun</damageDef>
+            <damageAmountBase>55</damageAmountBase>
+            <explosionDelay>30</explosionDelay>
+            <soundExplode>Explosion_Stun</soundExplode>
+            <speed>10</speed>
+            <gravityFactor>2</gravityFactor>
+        </projectile>
+    </ThingDef>
+
+    <!-- Grenade -->
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseGrenadeEquipment">
+        <defName>RG_Maraca_Flash</defName>
+        <label>Flash maraca</label>
+        <description>Maracas are a classical instrument used by neolithic tribes and industrial colonies alike. Using the maracas as a vessel for the explosive compounds gives improved results, like increased range thanks to the change in aerodynamics and the possibility to increase the amount of materials included in some cases.</description>
+        <stackLimit>25</stackLimit>
+        <resourceReadoutPriority>First</resourceReadoutPriority>
+        <thingClass>CombatExtended.AmmoThing</thingClass>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Maracas/Grenade/Flash</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>RG_Maraca_Throw</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <Mass>0.4</Mass>
+            <Bulk>0.87</Bulk>
+            <MarketValue>12.22</MarketValue>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.65</SightsEfficiency>
+            <WorkToMake>12000</WorkToMake>
+        </statBases>
+        <weaponTags>
+            <li>CE_AI_AOE</li>
+            <li>CE_GrenadeFlashbang</li>
+        </weaponTags>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <label>throw Flash maraca</label>
+                <verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>15</range>
+                <warmupTime>1.8</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+                <soundCast>RG_Maraca_Throw</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>RG_Maraca_Proj_Flash</defaultProjectile>
+                <onlyManualCast>false</onlyManualCast>
+                <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+                <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_ExplosiveCE">
+                <damageAmountBase>25</damageAmountBase>
+                <explosiveDamageType>Stun</explosiveDamageType>
+                <explosiveRadius>4</explosiveRadius>
+                <explosionSound>Explosion_Stun</explosionSound>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>Body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>2</power>
+                <cooldownTime>1.75</cooldownTime>
+                <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Base</linkedBodyPartsGroup>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- ========== Frag Maraca ========== -->
+    <!-- Projectile -->
+    <ThingDef ParentName="BaseFragGrenadeProjectile">
+        <defName>RG_Maraca_Proj_Frag</defName>
+        <label>frag maraca</label>
+        <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+        <graphicData>
+            <texPath>Maracas/Projectile/RG_Maraca_Frag</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <explosionRadius>1.5</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>56</damageAmountBase>
+            <explosionDelay>60</explosionDelay>
+            <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+            <speed>12</speed>
+            <gravityFactor>2</gravityFactor>
+        </projectile>
+        <comps>
+            <li Class="CombatExtended.CompProperties_Fragments">
+                <fragments>
+                    <Fragment_Small>40</Fragment_Small>
+                </fragments>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Grenade -->
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseGrenadeEquipment">
+        <defName>RG_Maraca_Frag</defName>
+        <label>frag maraca</label>
+        <description>Maracas are a classical instrument used by neolithic tribes and industrial colonies alike. Using the maracas as a vessel for the explosive compounds gives improved results, like increased range thanks to the change in aerodynamics and the possibility to increase the amount of materials included in some cases.</description>
+        <stackLimit>25</stackLimit>
+        <resourceReadoutPriority>First</resourceReadoutPriority>
+        <thingClass>CombatExtended.AmmoThing</thingClass>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Maracas/Grenade/Frag</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>RG_Maraca_Throw</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <Mass>0.4</Mass>
+            <Bulk>0.87</Bulk>
+            <MarketValue>12.22</MarketValue>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.65</SightsEfficiency>
+            <WorkToMake>12000</WorkToMake>
+        </statBases>
+        <weaponTags>
+            <li>CE_AI_AOE</li>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <label>throw frag maraca</label>
+                <verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>15.0</range>
+                <minRange>4</minRange>
+                <warmupTime>0.8</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>RG_Maraca_Throw</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>RG_Maraca_Proj_Frag</defaultProjectile>
+                <onlyManualCast>false</onlyManualCast>
+                <ai_AvoidFriendlyFireRadius>7</ai_AvoidFriendlyFireRadius>
+                <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_ExplosiveCE">
+                <damageAmountBase>56</damageAmountBase>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <explosiveRadius>1.5</explosiveRadius>
+            </li>
+            <li Class="CombatExtended.CompProperties_Fragments">
+                <fragments>
+                    <Fragment_Small>40</Fragment_Small>
+                </fragments>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>Body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>2</power>
+                <cooldownTime>1.75</cooldownTime>
+                <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Base</linkedBodyPartsGroup>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- ========== Incendiary Maraca ========== -->
+    <!-- Projectile -->
+    <ThingDef ParentName="BaseFragGrenadeProjectile">
+        <defName>RG_Maraca_Proj_Incendiary</defName>
+        <label>Incendiary maraca</label>
+        <thingClass>CombatExtended.Projectile_FireTrail</thingClass>
+        <graphicData>
+            <texPath>Maracas/Projectile/RG_Maraca_Incendiary</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <explosionRadius>1.5</explosionRadius>
+            <damageDef>PrometheumFlame</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+            <preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
+            <preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+            <speed>12</speed>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+            <gravityFactor>2</gravityFactor>
+        </projectile>
+        <comps>
+        </comps>
+    </ThingDef>
+
+    <!-- Grenade -->
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseGrenadeEquipment">
+        <defName>RG_Maraca_Incendiary</defName>
+        <label>Incendiary maraca</label>
+        <description>Maracas are a classical instrument used by neolithic tribes and industrial colonies alike. Using the maracas as a vessel for the explosive compounds gives improved results, like increased range thanks to the change in aerodynamics and the possibility to increase the amount of materials included in some cases.</description>
+        <stackLimit>25</stackLimit>
+        <resourceReadoutPriority>First</resourceReadoutPriority>
+        <thingClass>CombatExtended.AmmoThing</thingClass>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Maracas/Grenade/Incendiary</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>RG_Maraca_Throw</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <Mass>0.4</Mass>
+            <Bulk>0.87</Bulk>
+            <MarketValue>12.22</MarketValue>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.65</SightsEfficiency>
+            <WorkToMake>12000</WorkToMake>
+        </statBases>
+        <weaponTags>
+            <li>CE_AI_AOE</li>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <label>throw Incendiary maraca</label>
+                <verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>15.0</range>
+                <minRange>2</minRange>
+                <warmupTime>0.8</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>RG_Maraca_Throw</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>RG_Maraca_Proj_Incendiary</defaultProjectile>
+                <onlyManualCast>false</onlyManualCast>
+                <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+                <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_ExplosiveCE">
+                <damageAmountBase>1</damageAmountBase>
+                <explosiveDamageType>Flame</explosiveDamageType>
+                <explosiveRadius>1.5</explosiveRadius>
+                <preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
+                <preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>Body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>2</power>
+                <cooldownTime>1.75</cooldownTime>
+                <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Base</linkedBodyPartsGroup>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- ========== Rubber Maraca ========== -->
+    <!-- Projectile -->
+    <!--<ThingDef ParentName="Base45ACPBullet">
+        <defName>RG_Maraca_Proj_Rubber</defName>
+        <label>Rubber maraca</label>
+        <graphicData>
+            <texPath>Maracas/Projectile/RG_Maraca_Rubber</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>Blunt</damageDef>
+            <damageAmountBase>5</damageAmountBase>
+            <secondaryDamage>
+                <li>
+                    <def>Beanbag</def>
+                    <amount>4</amount>
+                    <chance>0.10</chance>
+                </li>
+            </secondaryDamage>
+            <armorPenetrationBlunt>1.2</armorPenetrationBlunt>
+            <speed>20</speed>
+            <dropsCasings>false</dropsCasings>
+        </projectile>
+    </ThingDef>-->
+
+    <!-- Grenade -->
+    <!--<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseGrenadeEquipment">
+        <defName>RG_Maraca_Rubber</defName>
+        <label>Rubber maraca</label>
+        <description>Maracas are a classical instrument used by neolithic tribes and industrial colonies alike. Using the maracas as a vessel for the explosive compounds gives improved results, like increased range thanks to the change in aerodynamics and the possibility to increase the amount of materials included in some cases.</description>
+        <stackLimit>25</stackLimit>
+        <resourceReadoutPriority>First</resourceReadoutPriority>
+        <thingClass>CombatExtended.AmmoThing</thingClass>
+        
+        
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Maracas/Grenade/Rubber</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>RG_Maraca_Throw</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <Mass>0.4</Mass>
+            <Bulk>0.87</Bulk>
+            <MarketValue>12.22</MarketValue>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.65</SightsEfficiency>
+            <WorkToMake>12000</WorkToMake>
+        </statBases>
+
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <label>throw Rubber maraca</label>
+                <verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>15.0</range>
+                <minRange>4</minRange>
+                <warmupTime>0.8</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+                <soundCast>RG_Maraca_Throw</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>RG_Maraca_Proj_Rubber</defaultProjectile>
+                <onlyManualCast>false</onlyManualCast>
+                <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+            </li>
+        </verbs>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>handle</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>2</power>
+                <cooldownTime>1.59</cooldownTime>
+                <armorPenetrationBlunt>0.625</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>head</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>5</power>
+                <extraMeleeDamages>
+                    <li>
+                        <def>Stun</def>
+                        <amount>32</amount>
+                        <chance>0.20</chance>
+                    </li>
+                </extraMeleeDamages>
+                <cooldownTime>1.68</cooldownTime>
+                <chanceFactor>1.33</chanceFactor>
+                <armorPenetrationBlunt>3.375</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+            </li>
+        </tools>
+    </ThingDef>-->
+
+    <!-- ========== Smoke Maraca ========== -->
+    <!-- Projectile -->
+    <!--<ThingDef ParentName="BaseFragGrenadeProjectile">
+        <defName>RG_Maraca_Proj_Smoke</defName>
+        <label>Smoke maraca</label>
+        <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+        <graphicData>
+            <texPath>Maracas/Projectile/RG_Maraca_Smoke</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <explosionRadius>4</explosionRadius>
+            <damageDef>Smoke</damageDef>
+            <explosionDelay>30</explosionDelay>
+            <dropsCasings>true</dropsCasings>
+            <casingMoteDefname>Mote_GrenadePin</casingMoteDefname>
+            <postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
+            <preExplosionSpawnChance>1</preExplosionSpawnChance>
+            <speed>12</speed>
+            <gravityFactor>2</gravityFactor>
+        </projectile>
+    </ThingDef>-->
+
+    <!-- Grenade -->
+    <!--<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseGrenadeEquipment">
+        <defName>RG_Maraca_Smoke</defName>
+        <label>Smoke maraca</label>
+        <description>Maracas are a classical instrument used by neolithic tribes and industrial colonies alike. Using the maracas as a vessel for the explosive compounds gives improved results, like increased range thanks to the change in aerodynamics and the possibility to increase the amount of materials included in some cases.</description>
+        <stackLimit>25</stackLimit>
+        <resourceReadoutPriority>First</resourceReadoutPriority>
+        <thingClass>CombatExtended.AmmoThing</thingClass>
+        
+        
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Maracas/Grenade/Smoke</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>RG_Maraca_Throw</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <Mass>0.4</Mass>
+            <Bulk>0.87</Bulk>
+            <MarketValue>12.22</MarketValue>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.65</SightsEfficiency>
+            <WorkToMake>12000</WorkToMake>
+        </statBases>
+
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <label>throw Smoke maraca</label>
+                <verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>15.0</range>
+                <minRange>4</minRange>
+                <warmupTime>0.8</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+                <soundCast>RG_Maraca_Throw</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>RG_Maraca_Proj_Smoke</defaultProjectile>
+                <onlyManualCast>false</onlyManualCast>
+                <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_ExplosiveCE">
+                <damageAmountBase>4</damageAmountBase>
+                <explosiveDamageType>Smoke</explosiveDamageType>
+                <postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
+                <preExplosionSpawnChance>1</preExplosionSpawnChance>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>Body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>2</power>
+                <cooldownTime>1.75</cooldownTime>
+                <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Base</linkedBodyPartsGroup>
+            </li>
+        </tools>
+    </ThingDef>-->
+
+    <!-- ========== Toxic Maraca ==========-->
+    <!-- Projectile -->
+    <!--<ThingDef ParentName="BaseFragGrenadeProjectile">
+        <defName>RG_Maraca_Proj_Toxic</defName>
+        <label>Toxic maraca</label>
+        <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+        <graphicData>
+            <texPath>Maracas/Projectile/RG_Maraca_Toxic</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <explosionRadius>1.5</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>56</damageAmountBase>
+            <explosionDelay>60</explosionDelay>
+            <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+            <speed>14</speed>
+        </projectile>
+        <comps>
+            <li Class="CombatExtended.CompProperties_Fragments">
+                <fragments>
+                    <Fragment_Small>40</Fragment_Small>
+                </fragments>
+            </li>
+        </comps>
+    </ThingDef>-->
+
+    <!-- Grenade -->
+    <!--<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseGrenadeEquipment">
+        <defName>RG_Maraca_Toxic</defName>
+        <label>Toxic maraca</label>
+        <description>Maracas are a classical instrument used by neolithic tribes and industrial colonies alike. Using the maracas as a vessel for the explosive compounds gives improved results, like increased range thanks to the change in aerodynamics and the possibility to increase the amount of materials included in some cases.</description>
+        <stackLimit>25</stackLimit>
+        <resourceReadoutPriority>First</resourceReadoutPriority>
+        <thingClass>CombatExtended.AmmoThing</thingClass>
+        
+        
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Maracas/Grenade/Toxic</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>RG_Maraca_Throw</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <Mass>0.4</Mass>
+            <Bulk>0.87</Bulk>
+            <MarketValue>12.22</MarketValue>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.65</SightsEfficiency>
+            <WorkToMake>12000</WorkToMake>
+        </statBases>
+        
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <label>throw Toxic maraca</label>
+                <verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>15.0</range>
+                <minRange>4</minRange>
+                <warmupTime>0.8</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>RG_Maraca_Throw</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>RG_Maraca_Proj_Toxic</defaultProjectile>
+                <onlyManualCast>false</onlyManualCast>
+                <ai_AvoidFriendlyFireRadius>7</ai_AvoidFriendlyFireRadius>
+                <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_ExplosiveCE">
+                <damageAmountBase>56</damageAmountBase>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <explosiveRadius>1.5</explosiveRadius>
+            </li>
+            <li Class="CombatExtended.CompProperties_Fragments">
+                <fragments>
+                    <Fragment_Small>40</Fragment_Small>
+                </fragments>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>Body</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>2</power>
+                <cooldownTime>1.75</cooldownTime>
+                <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Base</linkedBodyPartsGroup>
+            </li>
+        </tools>
+    </ThingDef>-->
+
+</Defs>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RulePackDef>
+        <defName>HRK_NamerFactionConquistadors</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>name->Spanish Conquistadors</li>
+                <li>name->Spanish Empire</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>HRK_NamerSettlementConquistadors</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>name-> Madrid</li>
+                <li>name-> Barcelona</li>
+                <li>name-> Sevilla</li>
+                <li>name-> Bilbao</li>
+                <li>name-> Málaga</li>
+                <li>name-> Oviedo</li>
+                <li>name-> Alicante</li>
+                <li>name-> La Palma</li>
+                <li>name-> Zaragoza</li>
+                <li>name-> Murcia</li>
+                <li>name-> Tenerife</li>
+                <li>name-> Granada</li>
+                <li>name-> Vigo</li>
+                <li>name-> Cartagena</li>
+                <li>name-> San Sebastián</li>
+                <li>name-> A Coruña</li>
+                <li>name-> Valladolid</li>
+                <li>name-> Tarragona</li>
+                <li>name-> Córdoba</li>
+                <li>name-> Pamplona</li>
+                <li>name-> Castellón</li>
+                <li>name-> Santander</li>
+                <li>name-> Algeciras</li>
+                <li>name-> Huelva</li>
+                <li>name-> Almería</li>
+                <li>name-> Salamanca</li>
+                <li>name-> León</li>
+                <li>name-> Albacete</li>
+                <li>name-> Burgos</li>
+                <li>name-> Lleida</li>
+                <li>name-> Girona</li>
+                <li>name-> Badajoz</li>
+                <li>name-> Pontevedra</li>
+                <li>name-> Ourense</li>
+                <li>name-> Gandia</li>
+                <li>name-> Manresa</li>
+                <li>name-> Toledo</li>
+                <li>name-> Lugo</li>
+                <li>name-> Palencia</li>
+                <li>name-> Guadalajara</li>
+                <li>name-> Hispaniola</li>
+                <li>name-> Cuba</li>
+                <li>name-> Jamaica</li>
+                <li>name-> Puerto Rico</li>
+                <li>name-> Veracruz</li>
+                <li>name-> Santo Domingo</li>
+                <li>name-> Panamá</li>
+                <li>name-> La Havana</li>
+                <li>name-> Ciudad de México</li>
+                <li>name-> San Francisco</li>
+                <li>name-> Acapulco</li>
+                <li>name-> Portobelo</li>
+                <li>name-> Cartagena de Indias</li>
+                <li>name-> Lima</li>
+                <li>name-> Valparaíso</li>
+                <li>name-> Buenos Aires</li>
+                <li>name-> Rio de Janeiro</li>
+                <li>name-> Salvador de Bahía</li>
+                <li>name-> Montevideo</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

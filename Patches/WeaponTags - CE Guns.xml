@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Combat Extended Guns</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="CE_Gun_Crossbow"]/weaponTags</xpath>
+                    <value>
+                        <li>HRK_Conquistadors_Crossbow</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]/weaponTags</xpath>
+                    <value>
+                        <li>HRK_Conquistadors_Musket</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]/weaponTags</xpath>
+                    <value>
+                        <li>HRK_Conquistadors_Musket</li>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ArmorHelmetMakeableBase">
+        <defName>HRK_SpanishMorion</defName>
+        <label>spanish morion</label>
+        <description>Spanish armor, mostly made in Toledo, is among the finest in the world. Encased from head to foot in a steel shell, Spanish conquistadors are all but invulnerable when facing native opponents.</description>
+        <techLevel>Medieval</techLevel>
+        <graphicData>
+            <texPath>Apparel/Headgear/SpanishMorion/HRK_SpanishMorion_UI</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>0.8</uiIconScale>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costStuffCount>50</costStuffCount>
+        <statBases>
+            <WorkToMake>3400</WorkToMake>
+            <MaxHitPoints>180</MaxHitPoints>
+            <Mass>2</Mass>
+            <StuffEffectMultiplierArmor>1</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+            <EquipDelay>1.5</EquipDelay>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>Smithing</researchPrerequisite>
+            <recipeUsers>
+                <li>ElectricSmithy</li>
+                <li>FueledSmithy</li>
+            </recipeUsers>
+        </recipeMaker>
+        <apparel>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <bodyPartGroups>
+                <li>UpperHead</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Apparel/Headgear/SpanishMorion/HRK_SpanishMorion</wornGraphicPath>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <tags>
+                <li>HRK_SpanishMorion</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+</Defs>

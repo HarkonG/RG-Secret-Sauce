@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="HRK_SpanishMorion"]/statBases/StuffEffectMultiplierArmor</xpath>
+                    <value>
+                        <StuffEffectMultiplierArmor>5.5</StuffEffectMultiplierArmor>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="HRK_SpanishMorion"]/stuffCategories/li[.="Metallic"]</xpath>
+                    <value>
+                        <li>Steeled</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/PawnKindDef[@Name="HRK_ConquistadorsPawnKindBase"]</xpath>
+                    <value>
+                        <li Class="CombatExtended.LoadoutPropertiesExtension">
+                            <primaryMagazineCount>
+                                <min>30</min>
+                                <max>50</max>
+                            </primaryMagazineCount>
+                            <shieldMoney>
+                                <min>200</min>
+                                <max>600</max>
+                            </shieldMoney>
+                            <shieldTags>
+                                <li>TribalShield</li>
+                            </shieldTags>
+                            <shieldChance>0.5</shieldChance>
+                            <forcedSidearm>
+                                <sidearmMoney>
+                                    <min>150</min>
+                                    <max>350</max>
+                                </sidearmMoney>
+                                <weaponTags>
+                                    <li>CE_Sidearm_Melee</li>
+                                </weaponTags>
+                            </forcedSidearm>
+                        </li>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

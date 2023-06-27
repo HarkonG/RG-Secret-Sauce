@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <ThingDef ParentName="MealBase">
+        <defName>RG_MexicanMealSurvivalPack</defName>
+        <label>authentic mexican meal</label>
+        <description>Taco Bell is mexican food :P</description>
+        <graphicData>
+            <texPath>Meal/MexicanPack</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <DeteriorationRate>0.25</DeteriorationRate>
+            <MarketValue>24</MarketValue>
+            <Mass>0.3</Mass>
+            <WorkToMake>450</WorkToMake>
+            <Nutrition>0.9</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealSimple</preferability>
+            <optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+            <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+        </ingestible>
+        <allowedArchonexusCount>40</allowedArchonexusCount>
+    </ThingDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>CookMexicanMealSurvivalPack</defName>
+        <label>cook mexican survival meal</label>
+        <description>Prepare a mexican survival meal from a combination of meat and plant ingredients. Much of the ingredients are wasted in the preservation process.</description>
+        <jobString>Cooking survival meal.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                        <li>AnimalProductRaw</li>
+                    </categories>
+                </filter>
+                <count>0.30</count>
+            </li>
+            <li>
+                <filter>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                    </categories>
+                </filter>
+                <count>0.30</count>
+            </li>
+        </ingredients>
+        <products>
+            <RG_MexicanMealSurvivalPack>1</RG_MexicanMealSurvivalPack>
+        </products>
+        <skillRequirements>
+            <Cooking>8</Cooking>
+        </skillRequirements>
+        <researchPrerequisite>PackagedSurvivalMeal</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>CookMexicanMealSurvivalPackBulk</defName>
+        <label>cook mexican survival meal x4</label>
+        <description>Prepare 4 mexican survival meals from a combination of meat and plant ingredients. Much of the ingredients are wasted in the preservation process.</description>
+        <jobString>Cooking 4 survival meals.</jobString>
+        <workAmount>1440</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                        <li>AnimalProductRaw</li>
+                    </categories>
+                </filter>
+                <count>1.20</count>
+            </li>
+            <li>
+                <filter>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                    </categories>
+                </filter>
+                <count>1.20</count>
+            </li>
+        </ingredients>
+        <products>
+            <RG_MexicanMealSurvivalPack>4</RG_MexicanMealSurvivalPack>
+        </products>
+        <skillRequirements>
+            <Cooking>8</Cooking>
+        </skillRequirements>
+        <researchPrerequisite>PackagedSurvivalMeal</researchPrerequisite>
+    </RecipeDef>
+
+</Defs>

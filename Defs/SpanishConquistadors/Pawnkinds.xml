@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <PawnKindDef Name="HRK_ConquistadorsPawnKindBase" Abstract="True">
+        <race>Human</race>
+        <defaultFactionType>HRK_ConquistadorsFaction</defaultFactionType>
+        <backstoryCategories>
+            <li>Tribal</li>
+        </backstoryCategories>
+        <maxGenerationAge>55</maxGenerationAge>
+        <chemicalAddictionChance>0.05</chemicalAddictionChance>
+        <invNutrition>2.55</invNutrition>
+        <invFoodDef>Pemmican</invFoodDef>
+        <apparelTags>
+            <li>HRK_SpanishMorion</li>
+            <li>MedievalBasic</li>
+            <li>HRK_Conquistadors_Apparel</li>
+            <li>Neolithic</li>
+        </apparelTags>
+    </PawnKindDef>
+
+    <PawnKindDef Name="HRK_ConquistadorsMilitaryBase" ParentName="HRK_ConquistadorsPawnKindBase" Abstract="True">
+        <minGenerationAge>20</minGenerationAge>
+        <apparelRequired>
+            <li>HRK_SpanishMorion</li>
+        </apparelRequired>
+    </PawnKindDef>
+
+    <PawnKindDef Name="HRK_ConquistadorsEliteMilitaryBase" ParentName="HRK_ConquistadorsMilitaryBase" Abstract="True">
+        <maxGenerationAge>45</maxGenerationAge>
+    </PawnKindDef>
+
+    <!-- High-tier -->
+    <PawnKindDef ParentName="HRK_ConquistadorsMilitaryBase">
+        <defName>HRK_Conquistadors_CrossBowman</defName>
+        <label>crossbowman</label>
+        <combatPower>80</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <gearHealthRange>
+            <min>0.8</min>
+            <max>1.8</max>
+        </gearHealthRange>
+        <apparelMoney>
+            <min>500</min>
+            <max>700</max>
+        </apparelMoney>
+        <apparelTags>
+            <li>MedievalArmorDecent</li>
+        </apparelTags>
+        <weaponMoney>
+            <min>500</min>
+            <max>700</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>HRK_Conquistadors_Crossbow</li>
+        </weaponTags>
+        <initialWillRange>2~4</initialWillRange>
+        <initialResistanceRange>14~22</initialResistanceRange>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>6~10</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="HRK_ConquistadorsMilitaryBase">
+        <defName>HRK_Conquistadors_Musketeer</defName>
+        <label>musketeer</label>
+        <combatPower>80</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <gearHealthRange>
+            <min>0.8</min>
+            <max>1.8</max>
+        </gearHealthRange>
+        <apparelMoney>
+            <min>500</min>
+            <max>700</max>
+        </apparelMoney>
+        <apparelTags>
+            <li>MedievalArmorDecent</li>
+        </apparelTags>
+        <weaponMoney>
+            <min>500</min>
+            <max>700</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>HRK_Conquistadors_Musket</li>
+        </weaponTags>
+        <initialWillRange>2~4</initialWillRange>
+        <initialResistanceRange>14~22</initialResistanceRange>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>6~10</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="HRK_ConquistadorsMilitaryBase">
+        <defName>HRK_Conquistadors_Footsoldier</defName>
+        <label>footsoldier</label>
+        <combatPower>90</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <canBeSapper>true</canBeSapper>
+        <gearHealthRange>
+            <min>0.8</min>
+            <max>1.8</max>
+        </gearHealthRange>
+        <apparelMoney>
+            <min>700</min>
+            <max>1000</max>
+        </apparelMoney>
+        <apparelTags>
+            <li>MedievalMilitary</li>
+            <li>MedievalArmorDecent</li>
+        </apparelTags>
+        <weaponMoney>
+            <min>500</min>
+            <max>700</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>HRK_Conquistadors_Melee</li>
+        </weaponTags>
+        <initialWillRange>2~4</initialWillRange>
+        <initialResistanceRange>14~22</initialResistanceRange>
+        <skills>
+            <li>
+                <skill>Melee</skill>
+                <range>6~10</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+
+    <!-- Elite tier -->
+    <PawnKindDef Name="HRK_Conquistadors_Knight" ParentName="HRK_ConquistadorsEliteMilitaryBase">
+        <defName>HRK_Conquistadors_Knight</defName>
+        <label>lieutenant</label>
+        <combatPower>110</combatPower>
+        <itemQuality>Good</itemQuality>
+        <apparelMoney>
+            <min>1000</min>
+            <max>1600</max>
+        </apparelMoney>
+        <apparelTags>
+            <li>MedievalMilitary</li>
+            <li>MedievalArmorDecent</li>
+            <li>MedievalArmorElite</li>
+        </apparelTags>
+        <weaponMoney>
+            <min>300</min>
+            <max>300</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>HRK_Conquistadors_Melee</li>
+        </weaponTags>
+        <initialWillRange>2~4</initialWillRange>
+        <initialResistanceRange>17~25</initialResistanceRange>
+        <skills>
+            <li>
+                <skill>Melee</skill>
+                <range>6~15</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="HRK_Conquistadors_Knight">
+        <defName>HRK_Conquistadors_EliteMusketeer</defName>
+        <label>elite musketeer</label>
+        <combatPower>110</combatPower>
+        <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+        <minGenerationAge>30</minGenerationAge>
+        <maxGenerationAge>999</maxGenerationAge>
+        <itemQuality>Excellent</itemQuality>
+        <factionLeader>false</factionLeader>
+        <apparelMoney>
+            <min>1600</min>
+            <max>2400</max>
+        </apparelMoney>
+        <weaponMoney>
+            <min>500</min>
+            <max>700</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>HRK_Conquistadors_Musket</li>
+        </weaponTags>
+        <initialWillRange>3~5</initialWillRange>
+        <initialResistanceRange>20~30</initialResistanceRange>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>10~18</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="HRK_Conquistadors_Knight">
+        <defName>HRK_Conquistadors_Lord</defName>
+        <label>captain</label>
+        <combatPower>140</combatPower>
+        <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+        <minGenerationAge>30</minGenerationAge>
+        <maxGenerationAge>999</maxGenerationAge>
+        <itemQuality>Excellent</itemQuality>
+        <factionLeader>false</factionLeader>
+        <apparelMoney>
+            <min>1600</min>
+            <max>2400</max>
+        </apparelMoney>
+        <weaponMoney>
+            <min>500</min>
+            <max>700</max>
+        </weaponMoney>
+        <initialWillRange>3~5</initialWillRange>
+        <initialResistanceRange>20~30</initialResistanceRange>
+        <skills>
+            <li>
+                <skill>Melee</skill>
+                <range>9~18</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="HRK_Conquistadors_Knight">
+        <defName>HRK_Spanish_King</defName>
+        <label>king</label>
+        <labelFemale>queen</labelFemale>
+        <combatPower>150</combatPower>
+        <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+        <minGenerationAge>30</minGenerationAge>
+        <maxGenerationAge>999</maxGenerationAge>
+        <itemQuality>Excellent</itemQuality>
+        <factionLeader>true</factionLeader>
+        <apparelMoney>
+            <min>1600</min>
+            <max>3000</max>
+        </apparelMoney>
+        <weaponMoney>
+            <min>500</min>
+            <max>700</max>
+        </weaponMoney>
+        <initialWillRange>3~5</initialWillRange>
+        <initialResistanceRange>20~30</initialResistanceRange>
+        <skills>
+            <li>
+                <skill>Melee</skill>
+                <range>9~18</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+
+</Defs>

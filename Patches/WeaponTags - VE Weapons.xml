@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Weapons Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Halberd"]/weaponTags</xpath>
+                    <value>
+                        <li>HRK_Conquistadors_Melee</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="VWE_Bow_Crossbow"]/weaponTags</xpath>
+                    <value>
+                        <li>HRK_Conquistadors_Crossbow</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="VWE_Gun_Musket"]/weaponTags</xpath>
+                    <value>
+                        <li>HRK_Conquistadors_Musket</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="VWE_Gun_Flintlock"]/weaponTags</xpath>
+                    <value>
+                        <li>HRK_Conquistadors_Musket</li>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+
+</Patch>
